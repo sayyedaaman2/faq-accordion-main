@@ -1,0 +1,219 @@
+
+:root{
+
+    /* Colors  */
+
+    --clr-white : hsl(0,0%,100%);
+    --clr-light-pink : hsl(275,100%,97%);
+    --clr-grayish-purple : hsl(292,16%,49%);
+    --clr-dark-purple : hsl(292,42%,14%);
+
+    /* Font-Families  */
+    --ff-serif : "Work Sans", sans-serif;
+
+    /* font Weight  */
+    --fw-normal : 400;
+    --fw-bold : 600 ;
+    --fw-extra-bold : 700;
+
+    /* Typography  */
+
+    --fs-400 : 1rem;
+    --fs-500 : 1.25rem;
+    --fs-600 : 1.50rem;
+    --fs-700 : clamp(1.75rem, 4vw, 2rem);
+
+
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding : 0;
+    margin : 0;
+}
+
+h1,h2,h3,h4{
+    padding : 0;
+    margin : 0;
+    line-height: 1.1;
+    font-weight: var(--fw-normal);
+}
+
+html{
+    font-family: var(--ff-serif);
+  
+}
+
+body{
+    min-height: 100vh;
+    font-size : var(--fs-400);
+    font-weight : var(--fw-normal);
+    color : var(--clr-grayish-purple);
+
+    background-color: var(--clr-light-pink);
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* -------------------- */
+/* Utility Classes */
+/* -------------------- */
+
+
+
+
+.bg-white {
+    background-color : var(--clr-white);
+}
+
+.bg-light-pink {
+    background-color : var(--clr-light-pink);
+}
+.bg-grayish-purple {
+    background-color : var(--clr-grayish-purple);
+}
+.bg-dark-purple {
+    background-color : var(--clr-dark-purple);
+}
+
+
+
+.text-white {
+    color : var(--clr-white);
+}
+
+.text-light-pink {
+    color : var(--clr-light-pink);
+}
+.text-grayish-purple {
+    color : var(--clr-grayish-purple);
+}
+.text-dark-purple {
+    color : var(--clr-dark-purple);
+}
+
+
+.ff-serif{
+    font-family: var(--ff-serif);
+}
+
+
+.fw-normal{
+    font-weight : var(--fw-normal);
+}
+
+.fw-bold{
+    font-weight : var(--fw-bold);
+}
+.fw-extra-bold{
+    font-weight : var(--fw-extra-bold);
+}
+
+
+.fs-400{
+    font-size : var(--fs-400);
+}
+
+.fs-500{
+    font-size : var(--fs-500);
+}
+
+.fs-600{
+    font-size : var(--fs-600);
+}
+
+.fs-700{
+    font-size : var(--fs-700);
+}
+
+
+
+
+
+.flex{
+    display: flex;
+    --gap : 1rem;
+    gap : var(--gap);
+
+}
+.grid{
+    display: grid;
+}
+
+.d-block{
+    display: block;
+}
+
+
+.hidden{
+    display: none;
+}
+
+/* -------------------- */
+/* General Classes      */
+/* -------------------- */
+.wrapper{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    margin-inline: 2rem;
+}
+
+/* -------------------- */
+/* Components            */
+/* -------------------- */
+
+.faq-card{
+    --br : .9375rem;
+    padding : 1.5rem;
+    border-radius: var(--br);
+    max-width: 37.5rem;
+}
+.faq-card p {
+    margin-bottom: 1rem;
+}
+.heading{
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.heading >  img{
+    display: block;
+    width: 40px;
+    
+}
+.question{
+    display: flex;
+    gap : var(--gap, 2rem);
+    justify-content: space-between;
+    padding-block : 1rem;
+}
+
+.plus,.minus{
+    cursor: pointer;
+}
+
+.question:hover > h4, .question:focus > h4{
+    color : rgb(237, 0, 237) !important;
+    cursor: pointer;
+   
+}
+
+
+/* -------------------- */
+/* Responsive           */
+/* -------------------- */
+@media only screen and (min-width:35rem){
+
+    body{
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+    }
+}
+
